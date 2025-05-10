@@ -1,0 +1,40 @@
+.loading-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; // Giữ nguyên, tránh quá cao
+    padding: 20px 0;
+
+    .spinners {
+        width: 3rem;
+        height: 3rem;
+        border: 4px solid rgba(0, 0, 0, 0.1); // Nhẹ hơn để phù hợp nền trắng
+        border-top-color: #333; // Đậm hơn để dễ nhìn
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    .loading-texts {
+        color: #333; // Đổi từ "black" sang màu xám đậm cho dễ nhìn
+        margin-top: 10px;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+  
+  // Animation cho spinner
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

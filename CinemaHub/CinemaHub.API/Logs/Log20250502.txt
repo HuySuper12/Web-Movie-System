@@ -1,0 +1,524 @@
+2025-05-02 19:40:31.563 +07:00 [INF] Start installing Hangfire SQL objects...
+2025-05-02 19:40:32.385 +07:00 [INF] Hangfire SQL objects installed.
+2025-05-02 19:40:32.888 +07:00 [INF] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-02 19:40:33.638 +07:00 [INF] Now listening on: https://localhost:7182
+2025-05-02 19:40:33.639 +07:00 [INF] Now listening on: http://localhost:5123
+2025-05-02 19:40:33.680 +07:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (local)@HangFire_CinemaHub'
+2025-05-02 19:40:33.680 +07:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-05-02 19:40:33.681 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-05-02 19:40:33.697 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-02 19:40:33.698 +07:00 [INF] Hosting environment: Development
+2025-05-02 19:40:33.698 +07:00 [INF] Content root path: D:\CinemaHub\CinemaHub.API
+2025-05-02 19:40:33.708 +07:00 [INF] Server laptop-q4e4lsdq:36164:e5d24cc5 successfully announced in 13.1601 ms
+2025-05-02 19:40:33.712 +07:00 [INF] Server laptop-q4e4lsdq:36164:e5d24cc5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-05-02 19:40:33.754 +07:00 [INF] 1 servers were removed due to timeout
+2025-05-02 19:40:33.811 +07:00 [INF] Server laptop-q4e4lsdq:36164:e5d24cc5 all the dispatchers started
+2025-05-02 19:40:34.110 +07:00 [WRN] Failed to process the job '8127': an exception occurred. Retry attempt 6 of 10 will be performed in 00:13:22.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.110 +07:00 [WRN] Failed to process the job '8134': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:12.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.133 +07:00 [WRN] Failed to process the job '8093': an exception occurred. Retry attempt 9 of 10 will be performed in 01:08:31.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUpdateSubscriptionPlanPendingFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 93
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.115 +07:00 [WRN] Failed to process the job '8129': an exception occurred. Retry attempt 6 of 10 will be performed in 00:12:58.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.110 +07:00 [WRN] Failed to process the job '8135': an exception occurred. Retry attempt 3 of 10 will be performed in 00:00:43.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.112 +07:00 [WRN] Failed to process the job '8128': an exception occurred. Retry attempt 6 of 10 will be performed in 00:13:34.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.112 +07:00 [WRN] Failed to process the job '8133': an exception occurred. Retry attempt 5 of 10 will be performed in 00:05:46.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.112 +07:00 [WRN] Failed to process the job '8125': an exception occurred. Retry attempt 6 of 10 will be performed in 00:11:22.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.113 +07:00 [WRN] Failed to process the job '8132': an exception occurred. Retry attempt 5 of 10 will be performed in 00:06:26.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.112 +07:00 [WRN] Failed to process the job '8126': an exception occurred. Retry attempt 6 of 10 will be performed in 00:11:28.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.112 +07:00 [WRN] Failed to process the job '8130': an exception occurred. Retry attempt 5 of 10 will be performed in 00:04:51.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.112 +07:00 [WRN] Failed to process the job '8131': an exception occurred. Retry attempt 5 of 10 will be performed in 00:04:31.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.113 +07:00 [WRN] Failed to process the job '8136': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:29.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:40:34.916 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - null null
+2025-05-02 19:40:35.135 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - 200 null text/html;charset=utf-8 224.5159ms
+2025-05-02 19:40:35.152 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-02 19:40:35.152 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - null null
+2025-05-02 19:40:35.159 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 7.745ms
+2025-05-02 19:40:35.205 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.5452ms
+2025-05-02 19:40:35.397 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-05-02 19:40:35.519 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.8164ms
+2025-05-02 19:41:03.929 +07:00 [WRN] Recurring job 'AutoUnlockAccountCustomer' can't be scheduled due to an error and will be retried in 00:00:15.
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details.
+ ---> System.TypeLoadException: Could not load type 'CinemaHub.Application.JobService' from assembly 'CinemaHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetTypeCore(String typeName, ReadOnlySpan`1 nestedTypeNames, Boolean throwOnError, Boolean ignoreCase)
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Assembly topLevelAssembly)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 251
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Assembly requestingAssembly, Boolean throwOnError, Boolean ignoreCase, Boolean extensibleParser)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.<>c.<DefaultTypeResolver>b__20_0(String name) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 83
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 75
+   at Hangfire.Storage.InvocationData.<>c.<CachedDeserializeMethod>b__33_0(MethodDeserializerCacheKey key) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 339
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Storage.InvocationData.CachedDeserializeMethod(Func`2 typeResolver, String typeName, String methodName, String parameterTypes, Type& type, MethodInfo& methodInfo) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 335
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 100
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 118
+   at Hangfire.RecurringJobExtensions.TriggerRecurringJob(IBackgroundJobFactory factory, JobStorage storage, IStorageConnection connection, IProfiler profiler, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\RecurringJobExtensions.cs:line 115
+   at Hangfire.Server.RecurringJobScheduler.ScheduleRecurringJob(BackgroundProcessContext context, IStorageConnection connection, String recurringJobId, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 333
+2025-05-02 19:41:04.169 +07:00 [WRN] Failed to process the job '8136': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:36.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:41:18.961 +07:00 [WRN] Recurring job 'AutoUnlockAccountCustomer' can't be scheduled due to an error and will be retried in 00:00:15.
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details.
+ ---> System.TypeLoadException: Could not load type 'CinemaHub.Application.JobService' from assembly 'CinemaHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetTypeCore(String typeName, ReadOnlySpan`1 nestedTypeNames, Boolean throwOnError, Boolean ignoreCase)
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Assembly topLevelAssembly)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 251
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Assembly requestingAssembly, Boolean throwOnError, Boolean ignoreCase, Boolean extensibleParser)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.<>c.<DefaultTypeResolver>b__20_0(String name) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 83
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 75
+   at Hangfire.Storage.InvocationData.<>c.<CachedDeserializeMethod>b__33_0(MethodDeserializerCacheKey key) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 339
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Storage.InvocationData.CachedDeserializeMethod(Func`2 typeResolver, String typeName, String methodName, String parameterTypes, Type& type, MethodInfo& methodInfo) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 335
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 100
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 118
+   at Hangfire.RecurringJobExtensions.TriggerRecurringJob(IBackgroundJobFactory factory, JobStorage storage, IStorageConnection connection, IProfiler profiler, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\RecurringJobExtensions.cs:line 115
+   at Hangfire.Server.RecurringJobScheduler.ScheduleRecurringJob(BackgroundProcessContext context, IStorageConnection connection, String recurringJobId, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 333
+2025-05-02 19:41:19.199 +07:00 [WRN] Failed to process the job '8135': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:08.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:41:29.523 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Notification/notifications/staff-sending?email=huy260704%40gmail.com&pageSize=5&notificationId=100000000 - null null
+2025-05-02 19:41:29.531 +07:00 [INF] Incoming Request: GET /api/Notification/notifications/staff-sending
+2025-05-02 19:41:30.770 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.NotificationController.ViewStaffSendNotificationAsync (CinemaHub.API)'
+2025-05-02 19:41:30.797 +07:00 [INF] Route matched with {action = "ViewStaffSendNotification", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewStaffSendNotificationAsync(System.String, Int32, System.String) on controller CinemaHub.API.Controllers.NotificationController (CinemaHub.API).
+2025-05-02 19:41:30.899 +07:00 [INF] ViewStaffSendingNotification API called.
+2025-05-02 19:41:31.741 +07:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-02 19:41:32.305 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-05-02 19:41:32.358 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_2='?' (DbType = Int32), @__staffId_0='?' (Size = 450), @__Parse_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_2) [n].[NotificationID], [n].[Content], [n].[ContentDetail], [n].[CreatedAt], [n].[ReceiverId], [n].[Status], [n].[Title], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__staffId_0 AND [n].[NotificationID] < @__Parse_1
+ORDER BY [n].[NotificationID] DESC
+2025-05-02 19:41:32.367 +07:00 [WRN] ViewStaffSendingNotification attempt failed - Notification not found
+2025-05-02 19:41:32.376 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Notification, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 19:41:32.435 +07:00 [INF] Executed action CinemaHub.API.Controllers.NotificationController.ViewStaffSendNotificationAsync (CinemaHub.API) in 1633.6476ms
+2025-05-02 19:41:32.437 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.NotificationController.ViewStaffSendNotificationAsync (CinemaHub.API)'
+2025-05-02 19:41:32.439 +07:00 [INF] Response: 400
+2025-05-02 19:41:32.446 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Notification/notifications/staff-sending?email=huy260704%40gmail.com&pageSize=5&notificationId=100000000 - 400 null application/json; charset=utf-8 2923.0914ms
+2025-05-02 19:41:33.984 +07:00 [WRN] Recurring job 'AutoUnlockAccountCustomer' can't be scheduled due to an error and will be retried in 00:00:15.
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details.
+ ---> System.TypeLoadException: Could not load type 'CinemaHub.Application.JobService' from assembly 'CinemaHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetTypeCore(String typeName, ReadOnlySpan`1 nestedTypeNames, Boolean throwOnError, Boolean ignoreCase)
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Assembly topLevelAssembly)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 251
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Assembly requestingAssembly, Boolean throwOnError, Boolean ignoreCase, Boolean extensibleParser)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.<>c.<DefaultTypeResolver>b__20_0(String name) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 83
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 75
+   at Hangfire.Storage.InvocationData.<>c.<CachedDeserializeMethod>b__33_0(MethodDeserializerCacheKey key) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 339
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Storage.InvocationData.CachedDeserializeMethod(Func`2 typeResolver, String typeName, String methodName, String parameterTypes, Type& type, MethodInfo& methodInfo) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 335
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 100
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 118
+   at Hangfire.RecurringJobExtensions.TriggerRecurringJob(IBackgroundJobFactory factory, JobStorage storage, IStorageConnection connection, IProfiler profiler, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\RecurringJobExtensions.cs:line 115
+   at Hangfire.Server.RecurringJobScheduler.ScheduleRecurringJob(BackgroundProcessContext context, IStorageConnection connection, String recurringJobId, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 333
+2025-05-02 19:41:49.005 +07:00 [WRN] Recurring job 'AutoUnlockAccountCustomer' can't be scheduled due to an error and will be retried in 00:00:15.
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details.
+ ---> System.TypeLoadException: Could not load type 'CinemaHub.Application.JobService' from assembly 'CinemaHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetTypeCore(String typeName, ReadOnlySpan`1 nestedTypeNames, Boolean throwOnError, Boolean ignoreCase)
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Assembly topLevelAssembly)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 251
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Assembly requestingAssembly, Boolean throwOnError, Boolean ignoreCase, Boolean extensibleParser)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.<>c.<DefaultTypeResolver>b__20_0(String name) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 83
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 75
+   at Hangfire.Storage.InvocationData.<>c.<CachedDeserializeMethod>b__33_0(MethodDeserializerCacheKey key) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 339
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Storage.InvocationData.CachedDeserializeMethod(Func`2 typeResolver, String typeName, String methodName, String parameterTypes, Type& type, MethodInfo& methodInfo) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 335
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 100
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 118
+   at Hangfire.RecurringJobExtensions.TriggerRecurringJob(IBackgroundJobFactory factory, JobStorage storage, IStorageConnection connection, IProfiler profiler, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\RecurringJobExtensions.cs:line 115
+   at Hangfire.Server.RecurringJobScheduler.ScheduleRecurringJob(BackgroundProcessContext context, IStorageConnection connection, String recurringJobId, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 333
+2025-05-02 19:41:49.218 +07:00 [WRN] Failed to process the job '8136': an exception occurred. Retry attempt 3 of 10 will be performed in 00:00:55.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:41:59.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Notification/notifications/staff-sending?email=thanh1212%40gmail.com&pageSize=5&notificationId=100000000 - null null
+2025-05-02 19:41:59.358 +07:00 [INF] Incoming Request: GET /api/Notification/notifications/staff-sending
+2025-05-02 19:41:59.363 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.NotificationController.ViewStaffSendNotificationAsync (CinemaHub.API)'
+2025-05-02 19:41:59.365 +07:00 [INF] Route matched with {action = "ViewStaffSendNotification", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewStaffSendNotificationAsync(System.String, Int32, System.String) on controller CinemaHub.API.Controllers.NotificationController (CinemaHub.API).
+2025-05-02 19:41:59.370 +07:00 [INF] ViewStaffSendingNotification API called.
+2025-05-02 19:41:59.393 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-05-02 19:41:59.401 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_2='?' (DbType = Int32), @__staffId_0='?' (Size = 450), @__Parse_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_2) [n].[NotificationID], [n].[Content], [n].[ContentDetail], [n].[CreatedAt], [n].[ReceiverId], [n].[Status], [n].[Title], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__staffId_0 AND [n].[NotificationID] < @__Parse_1
+ORDER BY [n].[NotificationID] DESC
+2025-05-02 19:41:59.408 +07:00 [INF] ViewStaffSendingNotification completed successfully for Email thanh1212@gmail.com at "2025-05-02T12:41:59.4087389Z"
+2025-05-02 19:41:59.439 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Notification, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 19:41:59.444 +07:00 [INF] Executed action CinemaHub.API.Controllers.NotificationController.ViewStaffSendNotificationAsync (CinemaHub.API) in 76.8174ms
+2025-05-02 19:41:59.445 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.NotificationController.ViewStaffSendNotificationAsync (CinemaHub.API)'
+2025-05-02 19:41:59.446 +07:00 [INF] Response: 200
+2025-05-02 19:41:59.447 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Notification/notifications/staff-sending?email=thanh1212%40gmail.com&pageSize=5&notificationId=100000000 - 200 null application/json; charset=utf-8 94.8514ms
+2025-05-02 19:42:04.034 +07:00 [WRN] Recurring job 'AutoUnlockAccountCustomer' can't be scheduled due to an error and will be retried in 00:00:15.
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details.
+ ---> System.TypeLoadException: Could not load type 'CinemaHub.Application.JobService' from assembly 'CinemaHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetTypeCore(String typeName, ReadOnlySpan`1 nestedTypeNames, Boolean throwOnError, Boolean ignoreCase)
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Assembly topLevelAssembly)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 251
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Assembly requestingAssembly, Boolean throwOnError, Boolean ignoreCase, Boolean extensibleParser)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.<>c.<DefaultTypeResolver>b__20_0(String name) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 83
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 75
+   at Hangfire.Storage.InvocationData.<>c.<CachedDeserializeMethod>b__33_0(MethodDeserializerCacheKey key) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 339
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Storage.InvocationData.CachedDeserializeMethod(Func`2 typeResolver, String typeName, String methodName, String parameterTypes, Type& type, MethodInfo& methodInfo) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 335
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 100
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 118
+   at Hangfire.RecurringJobExtensions.TriggerRecurringJob(IBackgroundJobFactory factory, JobStorage storage, IStorageConnection connection, IProfiler profiler, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\RecurringJobExtensions.cs:line 115
+   at Hangfire.Server.RecurringJobScheduler.ScheduleRecurringJob(BackgroundProcessContext context, IStorageConnection connection, String recurringJobId, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 333
+2025-05-02 19:42:19.068 +07:00 [ERR] Recurring job 'AutoUnlockAccountCustomer' can't be scheduled due to an error and will be disabled.
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details.
+ ---> System.TypeLoadException: Could not load type 'CinemaHub.Application.JobService' from assembly 'CinemaHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetTypeCore(String typeName, ReadOnlySpan`1 nestedTypeNames, Boolean throwOnError, Boolean ignoreCase)
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Assembly topLevelAssembly)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 251
+   at System.Reflection.TypeNameParser.GetType(String typeName, ReadOnlySpan`1 nestedTypeNames, String assemblyNameIfAny)
+   at System.Reflection.TypeNameParser.NamespaceTypeName.ResolveType(TypeNameParser& parser, String containingAssemblyIfAny)
+   at System.Reflection.TypeNameParser.Parse()
+   at System.Reflection.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Assembly requestingAssembly, Boolean throwOnError, Boolean ignoreCase, Boolean extensibleParser)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.<>c.<DefaultTypeResolver>b__20_0(String name) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 83
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\TypeHelper.cs:line 75
+   at Hangfire.Storage.InvocationData.<>c.<CachedDeserializeMethod>b__33_0(MethodDeserializerCacheKey key) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 339
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Hangfire.Storage.InvocationData.CachedDeserializeMethod(Func`2 typeResolver, String typeName, String methodName, String parameterTypes, Type& type, MethodInfo& methodInfo) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 335
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 100
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 118
+   at Hangfire.RecurringJobExtensions.TriggerRecurringJob(IBackgroundJobFactory factory, JobStorage storage, IStorageConnection connection, IProfiler profiler, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\RecurringJobExtensions.cs:line 115
+   at Hangfire.Server.RecurringJobScheduler.ScheduleRecurringJob(BackgroundProcessContext context, IStorageConnection connection, String recurringJobId, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 333
+2025-05-02 19:42:49.271 +07:00 [WRN] Failed to process the job '8136': an exception occurred. Retry attempt 4 of 10 will be performed in 00:02:48.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:42:53.176 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Notification/notifications/users?email=huy260704%40gmail.com&pageSize=5&notificationId=10000000 - null null
+2025-05-02 19:42:53.184 +07:00 [INF] Incoming Request: GET /api/Notification/notifications/users
+2025-05-02 19:42:53.189 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.NotificationController.ViewUserNotificationAsync (CinemaHub.API)'
+2025-05-02 19:42:53.198 +07:00 [INF] Route matched with {action = "ViewUserNotification", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewUserNotificationAsync(System.String, Int32, System.String) on controller CinemaHub.API.Controllers.NotificationController (CinemaHub.API).
+2025-05-02 19:42:53.204 +07:00 [INF] ViewUserNotification API called.
+2025-05-02 19:42:53.282 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-05-02 19:42:53.294 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_2='?' (DbType = Int32), @__userId_0='?' (Size = 4000), @__Parse_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_2) [n].[NotificationID], [n].[Content], [n].[ContentDetail], [n].[CreatedAt], [n].[ReceiverId], [n].[Status], [n].[Title], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[ReceiverId] = @__userId_0 AND [n].[NotificationID] < @__Parse_1
+ORDER BY [n].[NotificationID] DESC
+2025-05-02 19:42:53.297 +07:00 [INF] ViewUserNotification completed successfully for Email huy260704@gmail.com at "2025-05-02T12:42:53.2977582Z"
+2025-05-02 19:42:53.300 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Notification, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 19:42:53.311 +07:00 [INF] Executed action CinemaHub.API.Controllers.NotificationController.ViewUserNotificationAsync (CinemaHub.API) in 110.7185ms
+2025-05-02 19:42:53.312 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.NotificationController.ViewUserNotificationAsync (CinemaHub.API)'
+2025-05-02 19:42:53.312 +07:00 [INF] Response: 200
+2025-05-02 19:42:53.313 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Notification/notifications/users?email=huy260704%40gmail.com&pageSize=5&notificationId=10000000 - 200 null application/json; charset=utf-8 137.1657ms
+2025-05-02 19:43:16.626 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Notification/notifications/users-unread?email=huy260704%40gmail.com&pageSize=5&notificationId=10000000 - null null
+2025-05-02 19:43:16.629 +07:00 [INF] Incoming Request: GET /api/Notification/notifications/users-unread
+2025-05-02 19:43:16.630 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.NotificationController.ViewUserNotificationUnReadAsync (CinemaHub.API)'
+2025-05-02 19:43:16.637 +07:00 [INF] Route matched with {action = "ViewUserNotificationUnRead", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewUserNotificationUnReadAsync(System.String, Int32, System.String) on controller CinemaHub.API.Controllers.NotificationController (CinemaHub.API).
+2025-05-02 19:43:16.643 +07:00 [INF] ViewUserNotificationUnRead API called.
+2025-05-02 19:43:16.651 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-05-02 19:43:16.666 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_2='?' (DbType = Int32), @__userId_0='?' (Size = 4000), @__Parse_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_2) [n].[NotificationID], [n].[Content], [n].[ContentDetail], [n].[CreatedAt], [n].[ReceiverId], [n].[Status], [n].[Title], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[ReceiverId] = @__userId_0 AND [n].[Status] = CAST(0 AS bit) AND [n].[NotificationID] < @__Parse_1
+ORDER BY [n].[NotificationID] DESC
+2025-05-02 19:43:16.670 +07:00 [INF] ViewUserNotificationUnRead completed successfully for Email huy260704@gmail.com at "2025-05-02T12:43:16.6700633Z"
+2025-05-02 19:43:16.672 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Notification, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 19:43:16.675 +07:00 [INF] Executed action CinemaHub.API.Controllers.NotificationController.ViewUserNotificationUnReadAsync (CinemaHub.API) in 36.3229ms
+2025-05-02 19:43:16.677 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.NotificationController.ViewUserNotificationUnReadAsync (CinemaHub.API)'
+2025-05-02 19:43:16.678 +07:00 [INF] Response: 200
+2025-05-02 19:43:16.678 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Notification/notifications/users-unread?email=huy260704%40gmail.com&pageSize=5&notificationId=10000000 - 200 null application/json; charset=utf-8 52.4017ms
+2025-05-02 19:43:59.219 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Notification/notifications?pageSize=5&notificationId=100000000 - null null
+2025-05-02 19:43:59.222 +07:00 [INF] Incoming Request: GET /api/Notification/notifications
+2025-05-02 19:43:59.223 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.NotificationController.ViewAllUserNotificationFromAPIAsync (CinemaHub.API)'
+2025-05-02 19:43:59.227 +07:00 [INF] Route matched with {action = "ViewAllUserNotificationFromAPI", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewAllUserNotificationFromAPIAsync(Int32, System.String) on controller CinemaHub.API.Controllers.NotificationController (CinemaHub.API).
+2025-05-02 19:43:59.236 +07:00 [INF] ViewAllUserNotification API called.
+2025-05-02 19:43:59.246 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_1) [n].[NotificationID], [n].[Content], [n].[ContentDetail], [n].[CreatedAt], [n].[ReceiverId], [n].[Status], [n].[Title], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[NotificationID] < @__Parse_0
+ORDER BY [n].[NotificationID] DESC
+2025-05-02 19:43:59.250 +07:00 [INF] ViewAllUserNotification completed successfully at "2025-05-02T12:43:59.2501652Z"
+2025-05-02 19:43:59.251 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Notification, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 19:43:59.253 +07:00 [INF] Executed action CinemaHub.API.Controllers.NotificationController.ViewAllUserNotificationFromAPIAsync (CinemaHub.API) in 22.561ms
+2025-05-02 19:43:59.255 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.NotificationController.ViewAllUserNotificationFromAPIAsync (CinemaHub.API)'
+2025-05-02 19:43:59.256 +07:00 [INF] Response: 200
+2025-05-02 19:43:59.257 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Notification/notifications?pageSize=5&notificationId=100000000 - 200 null application/json; charset=utf-8 38.2871ms
+2025-05-02 19:44:34.011 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Notification/count-notification/user-unread?email=huy260704%40gmail.com - null null
+2025-05-02 19:44:34.017 +07:00 [INF] Incoming Request: GET /api/Notification/count-notification/user-unread
+2025-05-02 19:44:34.019 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.NotificationController.CountUserNotificationUnReadAsync (CinemaHub.API)'
+2025-05-02 19:44:34.023 +07:00 [INF] Route matched with {action = "CountUserNotificationUnRead", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CountUserNotificationUnReadAsync(System.String) on controller CinemaHub.API.Controllers.NotificationController (CinemaHub.API).
+2025-05-02 19:44:34.027 +07:00 [INF] CountNotificationUnRead API called.
+2025-05-02 19:44:34.037 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-05-02 19:44:34.091 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notifications] AS [n]
+WHERE [n].[ReceiverId] = @__userId_0 AND [n].[Status] = CAST(0 AS bit)
+2025-05-02 19:44:34.095 +07:00 [INF] CountNotificationUnRead completed successfully at "2025-05-02T12:44:34.0956276Z"
+2025-05-02 19:44:34.097 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 19:44:34.101 +07:00 [INF] Executed action CinemaHub.API.Controllers.NotificationController.CountUserNotificationUnReadAsync (CinemaHub.API) in 75.5648ms
+2025-05-02 19:44:34.103 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.NotificationController.CountUserNotificationUnReadAsync (CinemaHub.API)'
+2025-05-02 19:44:34.104 +07:00 [INF] Response: 200
+2025-05-02 19:44:34.105 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Notification/count-notification/user-unread?email=huy260704%40gmail.com - 200 null application/json; charset=utf-8 93.6838ms
+2025-05-02 19:44:34.374 +07:00 [WRN] Failed to process the job '8135': an exception occurred. Retry attempt 5 of 10 will be performed in 00:06:11.
+System.NotSupportedException: Only public methods can be invoked in the background. Ensure your method has the `public` access modifier, and you aren't using explicit interface implementation.
+   at Hangfire.Common.Job.Validate(Type type, String typeParameterName, MethodInfo method, String methodParameterName, Int32 argumentCount, String argumentParameterName) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 477
+   at Hangfire.Common.Job..ctor(Type type, MethodInfo method, IReadOnlyList`1 args, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 204
+   at Hangfire.Common.Job.FromExpression(LambdaExpression methodCall, Type explicitType, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 457
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall, String queue) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 357
+   at Hangfire.Common.Job.FromExpression(Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\Common\Job.cs:line 352
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.Enqueue(IBackgroundJobClient client, Expression`1 methodCall) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 86
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUnlockAccountCustomerFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 49
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-05-02 19:44:51.026 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Notification/249 - null null
+2025-05-02 19:44:51.029 +07:00 [INF] Incoming Request: GET /api/Notification/249
+2025-05-02 19:44:51.030 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.NotificationController.ViewNotificationByIdAsync (CinemaHub.API)'
+2025-05-02 19:44:51.036 +07:00 [INF] Route matched with {action = "ViewNotificationById", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewNotificationByIdAsync(Int32) on controller CinemaHub.API.Controllers.NotificationController (CinemaHub.API).
+2025-05-02 19:44:51.041 +07:00 [INF] ViewNotificationById API called.
+2025-05-02 19:44:51.055 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__notificationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [n].[NotificationID], [n].[Content], [n].[ContentDetail], [n].[CreatedAt], [n].[ReceiverId], [n].[Status], [n].[Title], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[NotificationID] = @__notificationId_0
+2025-05-02 19:44:51.059 +07:00 [INF] ViewAllUserNotification completed successfully at "2025-05-02T12:44:51.0597852Z"
+2025-05-02 19:44:51.060 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[CinemaHub.Domain.Entities.Notification, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 19:44:51.064 +07:00 [INF] Executed action CinemaHub.API.Controllers.NotificationController.ViewNotificationByIdAsync (CinemaHub.API) in 25.6515ms
+2025-05-02 19:44:51.066 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.NotificationController.ViewNotificationByIdAsync (CinemaHub.API)'
+2025-05-02 19:44:51.067 +07:00 [INF] Response: 200
+2025-05-02 19:44:51.067 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Notification/249 - 200 null application/json; charset=utf-8 42.0404ms

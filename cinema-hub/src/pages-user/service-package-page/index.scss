@@ -1,0 +1,130 @@
+/* Overall page structure */
+.service-package-page {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color:white;
+    background: url('https://phapluatplus.baophapluat.vn/stores/news_dataimages/2024/032024/24/01/in_article/picture120240324010740.jpg?rt=20240324010742') no-repeat center center;
+    background-size: cover;
+  }
+
+  
+  
+  /* Title Section */
+  .title {
+    background-color: #222;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.514);
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: gold;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0px 4px 8px rgba(255, 223, 0, 0.6);
+  }
+  
+  /* Service Selection Section */
+  .service-selection {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  /* Individual Service Option */
+  .service-option {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.888);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #f1a12a;
+  }
+  
+  .service-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Package Title */
+  .package-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #f06, #4a90e2);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  /* Package Details */
+  .package-details p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .package-details strong {
+    color: white;
+    position: relative;
+  }
+  
+  /* Popular Package Style */
+  .service-option.popular {
+    background-color: #f36f6f;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .service-option.popular .package-title {
+    background: linear-gradient(45deg, #ff4d4d, #ff8c00);
+  }
+  
+  .service-option.popular:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .button{
+    position: relative;
+    width: 50%;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-left: 50%;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .service-selection {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-option {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+
+  
+  

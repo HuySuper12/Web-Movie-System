@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ff6f61;
+    padding: 20px 10%;
+    text-align: center;
+    color: white;
+}
+header h1 {
+    font-size: 2.5rem;
+}
+
+
+.header{
+    background-color: #181818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 30px;
+    margin: 0;
+
+    //Cho chu nam an trong hinh
+    // position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header__nav{
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 40px; //cach cac element ra 
+        li {
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .word{
+                color: #f1f1f1;
+            }
+        }
+    }
+    
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+nav a {
+    text-decoration: none;
+    color: #ff6f61;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-down {
+    background-color: #ff6f61;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav bar */
+.nav-down {
+    background-color: #ff6f61;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dropdown button hover effect */
+.dropdown-btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* Dropdown content (menu items) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px 0;
+    z-index: 1;
+    width: 150px;
+    text-align: left;
+}
+
+/* Menu items inside dropdown */
+.dropdown-content button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Hover effect on menu items */
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Ensure dropdown content stays visible */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.user {
+    position: relative;
+  }
+  
+  .user-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #222;
+    border: 1px solid #555;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  
+  .dropdown button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .dropdown button:hover {
+    background: #444;
+  }
+
+  .button{
+    color:white;
+  }
+
+  .image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -5px;
+  }
+
+  /* Notification Container */
+.notification-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Bell Icon */
+  .bell-icon {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .bell-icon i {
+    font-size: 24px;
+  }
+  
+  .notification-counter {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: gold  ;
+    color: black;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+  }
+  
+  /* Dropdown Notification */
+  .dropdown-notification {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #222; /* Nền đen nhám */
+    color: white;
+    padding: 10px 0;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    overflow: hidden;
+    border: 1px solid #555;
+  }
+  
+  .dropdown-notification::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent;
+  }
+  
+  .notification-item {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notification-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .notification-item p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .notification-item span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .dropdown-notification .notification-item:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-notification .view-all {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    padding-top: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .dropdown-notification .view-all:hover {
+    background-color: gold;
+    color: black;
+  }
+  

@@ -1,0 +1,359 @@
+2025-04-30 21:11:02.649 +07:00 [INF] Start installing Hangfire SQL objects...
+2025-04-30 21:11:03.592 +07:00 [INF] Hangfire SQL objects installed.
+2025-04-30 21:11:04.098 +07:00 [INF] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-30 21:11:04.858 +07:00 [INF] Now listening on: https://localhost:7182
+2025-04-30 21:11:04.860 +07:00 [INF] Now listening on: http://localhost:5123
+2025-04-30 21:11:04.899 +07:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (local)@HangFire_CinemaHub'
+2025-04-30 21:11:04.900 +07:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-04-30 21:11:04.901 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-04-30 21:11:04.918 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 21:11:04.919 +07:00 [INF] Hosting environment: Development
+2025-04-30 21:11:04.920 +07:00 [INF] Content root path: D:\CinemaHub\CinemaHub.API
+2025-04-30 21:11:04.928 +07:00 [INF] Server laptop-q4e4lsdq:4292:55be0244 successfully announced in 10.848 ms
+2025-04-30 21:11:04.934 +07:00 [INF] Server laptop-q4e4lsdq:4292:55be0244 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-04-30 21:11:04.945 +07:00 [INF] 2 servers were removed due to timeout
+2025-04-30 21:11:05.007 +07:00 [INF] Server laptop-q4e4lsdq:4292:55be0244 all the dispatchers started
+2025-04-30 21:11:08.942 +07:00 [WRN] Failed to process the job '8093': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:42.
+System.NotImplementedException: The method or operation is not implemented.
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUpdateSubscriptionPlanPendingFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 76
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-04-30 21:11:09.052 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - null null
+2025-04-30 21:11:09.345 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - 200 null text/html;charset=utf-8 300.4298ms
+2025-04-30 21:11:09.349 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-30 21:11:09.349 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - null null
+2025-04-30 21:11:09.359 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 10.0006ms
+2025-04-30 21:11:09.452 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - 200 null text/javascript; charset=UTF-8 103.0145ms
+2025-04-30 21:11:09.510 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-04-30 21:11:09.674 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 165.073ms
+2025-04-30 21:11:10.000 +07:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-30 21:11:10.560 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-04-30 21:11:10.698 +07:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-30 21:11:10.698 +07:00 [INF] Executed DbCommand (41ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[MovieID], [t].[Description], [t].[Director], [t].[Duration], [t].[Language], [t].[ReleaseDate], [t].[Status], [t].[Thumbnail], [t].[Title], [t].[TrailerURL], [t].[UploadedBy], [t].[VideoURL], [t0].[GenreID], [t0].[GenreName], [t0].[MovieID], [t0].[GenreID0], [w].[HistoryID], [w].[MovieID], [w].[Progress], [w].[UserID], [w].[WatchedAt]
+FROM (
+    SELECT TOP(@__p_1) [m].[MovieID], [m].[Description], [m].[Director], [m].[Duration], [m].[Language], [m].[ReleaseDate], [m].[Status], [m].[Thumbnail], [m].[Title], [m].[TrailerURL], [m].[UploadedBy], [m].[VideoURL]
+    FROM [Movies] AS [m]
+    WHERE [m].[Status] IS NULL AND [m].[MovieID] < @__Parse_0
+    ORDER BY [m].[MovieID] DESC
+) AS [t]
+LEFT JOIN (
+    SELECT [m1].[GenreID], [m1].[GenreName], [m0].[MovieID], [m0].[GenreID] AS [GenreID0]
+    FROM [MovieGenreMapping] AS [m0]
+    INNER JOIN [MovieGenres] AS [m1] ON [m0].[GenreID] = [m1].[GenreID]
+) AS [t0] ON [t].[MovieID] = [t0].[MovieID]
+LEFT JOIN [WatchHistory] AS [w] ON [t].[MovieID] = [w].[MovieID]
+ORDER BY [t].[MovieID] DESC, [t0].[MovieID], [t0].[GenreID0], [t0].[GenreID]
+2025-04-30 21:11:10.753 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[AccountLockUntil], [a0].[Balance], [a0].[ConcurrencyStamp], [a0].[CreatedAt], [a0].[Email], [a0].[EmailConfirmed], [a0].[FullName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[OtpCode], [a0].[OtpExpiration], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[ProfilePicture], [a0].[SecurityStamp], [a0].[Status], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[ViolationCount]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-04-30 22:33:36.451 +07:00 [INF] Start installing Hangfire SQL objects...
+2025-04-30 22:33:37.094 +07:00 [INF] Hangfire SQL objects installed.
+2025-04-30 22:33:37.516 +07:00 [INF] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-30 22:33:38.150 +07:00 [INF] Now listening on: https://localhost:7182
+2025-04-30 22:33:38.151 +07:00 [INF] Now listening on: http://localhost:5123
+2025-04-30 22:33:38.188 +07:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (local)@HangFire_CinemaHub'
+2025-04-30 22:33:38.188 +07:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-04-30 22:33:38.189 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-04-30 22:33:38.205 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 22:33:38.205 +07:00 [INF] Hosting environment: Development
+2025-04-30 22:33:38.206 +07:00 [INF] Content root path: D:\CinemaHub\CinemaHub.API
+2025-04-30 22:33:38.215 +07:00 [INF] Server laptop-q4e4lsdq:35248:1dbe2ef8 successfully announced in 11.4806 ms
+2025-04-30 22:33:38.218 +07:00 [INF] Server laptop-q4e4lsdq:35248:1dbe2ef8 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-04-30 22:33:38.236 +07:00 [INF] 1 servers were removed due to timeout
+2025-04-30 22:33:38.289 +07:00 [INF] Server laptop-q4e4lsdq:35248:1dbe2ef8 all the dispatchers started
+2025-04-30 22:33:40.623 +07:00 [WRN] Failed to process the job '8093': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:56.
+System.NotImplementedException: The method or operation is not implemented.
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUpdateSubscriptionPlanPendingFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 76
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-04-30 22:33:40.721 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - null null
+2025-04-30 22:33:40.969 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - 200 null text/html;charset=utf-8 253.7486ms
+2025-04-30 22:33:40.975 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-30 22:33:40.976 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - null null
+2025-04-30 22:33:40.991 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 15.4848ms
+2025-04-30 22:33:41.027 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.0728ms
+2025-04-30 22:33:41.146 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-04-30 22:33:41.284 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 138.2017ms
+2025-04-30 22:33:41.618 +07:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-30 22:33:42.136 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-30 22:33:42.272 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[AccountLockUntil], [a0].[Balance], [a0].[ConcurrencyStamp], [a0].[CreatedAt], [a0].[Email], [a0].[EmailConfirmed], [a0].[FullName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[OtpCode], [a0].[OtpExpiration], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[ProfilePicture], [a0].[SecurityStamp], [a0].[Status], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[ViolationCount]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-04-30 22:34:08.516 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-30 22:34:08.525 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[AccountLockUntil], [a0].[Balance], [a0].[ConcurrencyStamp], [a0].[CreatedAt], [a0].[Email], [a0].[EmailConfirmed], [a0].[FullName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[OtpCode], [a0].[OtpExpiration], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[ProfilePicture], [a0].[SecurityStamp], [a0].[Status], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[ViolationCount]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-04-30 22:34:31.985 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments/get-total-revenue - null null
+2025-04-30 22:34:32.001 +07:00 [INF] Incoming Request: GET /api/Payment/payments/get-total-revenue
+2025-04-30 22:34:33.370 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.GetTotalRevenue (CinemaHub.API)'
+2025-04-30 22:34:33.388 +07:00 [INF] Route matched with {action = "GetTotalRevenue", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTotalRevenue() on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:34:33.395 +07:00 [INF] GetTotalRevenue API called.
+2025-04-30 22:34:33.439 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__status_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID]
+FROM [Payments] AS [p]
+WHERE [p].[PaymentStatus] = @__status_0
+2025-04-30 22:34:33.451 +07:00 [INF] GetTotalRevenue completed successfully at "2025-04-30T15:34:33.4517478Z"
+2025-04-30 22:34:33.464 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:34:33.479 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.GetTotalRevenue (CinemaHub.API) in 85.0431ms
+2025-04-30 22:34:33.480 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.GetTotalRevenue (CinemaHub.API)'
+2025-04-30 22:34:33.483 +07:00 [INF] Response: 200
+2025-04-30 22:34:33.485 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments/get-total-revenue - 200 null application/json; charset=utf-8 1499.8242ms
+2025-04-30 22:34:48.993 +07:00 [WRN] Failed to process the job '8093': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:22.
+System.NotImplementedException: The method or operation is not implemented.
+   at CinemaHub.Application.Services.JobService.EnqueueAutoUpdateSubscriptionPlanPendingFromAPIAsync() in D:\CinemaHub\CinemaHub.Application\Services\JobService.cs:line 76
+   at InvokeStub_JobService.EnqueueAutoUpdateSubscriptionPlanPendingFromAPIAsync(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+2025-04-30 22:35:16.153 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments?pageSize=3&paymentId=10000000 - null null
+2025-04-30 22:35:16.163 +07:00 [INF] Incoming Request: GET /api/Payment/payments
+2025-04-30 22:35:16.166 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewAllPaymentAsync (CinemaHub.API)'
+2025-04-30 22:35:16.180 +07:00 [INF] Route matched with {action = "ViewAllPayment", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewAllPaymentAsync(Int32, System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:35:16.256 +07:00 [INF] ViewAllPayment API called.
+2025-04-30 22:35:16.312 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PaymentID], [t].[Amount], [t].[ExpiryDate], [t].[PaymentCode], [t].[PaymentDate], [t].[PaymentMethod], [t].[PaymentStatus], [t].[SubscriptionPlanID], [t].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM (
+    SELECT TOP(@__p_1) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID]
+    FROM [Payments] AS [p]
+    WHERE [p].[PaymentID] < @__Parse_0
+    ORDER BY [p].[PaymentID] DESC
+) AS [t]
+INNER JOIN [SubscriptionPlans] AS [s] ON [t].[SubscriptionPlanID] = [s].[PlanID]
+ORDER BY [t].[PaymentID] DESC
+2025-04-30 22:35:16.319 +07:00 [INF] ViewAllPayment completed successfully at "2025-04-30T15:35:16.3192439Z"
+2025-04-30 22:35:16.371 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Payment, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:35:16.379 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewAllPaymentAsync (CinemaHub.API) in 196.787ms
+2025-04-30 22:35:16.381 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewAllPaymentAsync (CinemaHub.API)'
+2025-04-30 22:35:16.382 +07:00 [INF] Response: 200
+2025-04-30 22:35:16.383 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments?pageSize=3&paymentId=10000000 - 200 null application/json; charset=utf-8 230.2581ms
+2025-04-30 22:35:34.582 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payment-methods?paymentMethod=MoMo - null null
+2025-04-30 22:35:34.586 +07:00 [INF] Incoming Request: GET /api/Payment/payment-methods
+2025-04-30 22:35:34.589 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewAllPaymentMethodAsync (CinemaHub.API)'
+2025-04-30 22:35:34.593 +07:00 [INF] Route matched with {action = "ViewAllPaymentMethod", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewAllPaymentMethodAsync(System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:35:34.600 +07:00 [INF] ViewAllPaymentMethod API called.
+2025-04-30 22:35:34.623 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM [Payments] AS [p]
+INNER JOIN [SubscriptionPlans] AS [s] ON [p].[SubscriptionPlanID] = [s].[PlanID]
+WHERE LOWER([p].[PaymentMethod]) = @__ToLower_0
+2025-04-30 22:35:34.626 +07:00 [INF] ViewAllPaymentMethod completed successfully at "2025-04-30T15:35:34.6265509Z"
+2025-04-30 22:35:34.629 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Payment, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:35:34.633 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewAllPaymentMethodAsync (CinemaHub.API) in 37.4104ms
+2025-04-30 22:35:34.634 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewAllPaymentMethodAsync (CinemaHub.API)'
+2025-04-30 22:35:34.635 +07:00 [INF] Response: 200
+2025-04-30 22:35:34.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payment-methods?paymentMethod=MoMo - 200 null application/json; charset=utf-8 53.9184ms
+2025-04-30 22:35:45.530 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payment-methods?paymentMethod=sadasd - null null
+2025-04-30 22:35:45.532 +07:00 [INF] Incoming Request: GET /api/Payment/payment-methods
+2025-04-30 22:35:45.533 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewAllPaymentMethodAsync (CinemaHub.API)'
+2025-04-30 22:35:45.534 +07:00 [INF] Route matched with {action = "ViewAllPaymentMethod", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewAllPaymentMethodAsync(System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:35:45.540 +07:00 [INF] ViewAllPaymentMethod API called.
+2025-04-30 22:35:45.546 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM [Payments] AS [p]
+INNER JOIN [SubscriptionPlans] AS [s] ON [p].[SubscriptionPlanID] = [s].[PlanID]
+WHERE LOWER([p].[PaymentMethod]) = @__ToLower_0
+2025-04-30 22:35:45.550 +07:00 [WRN] ViewAllPaymentMethod attempt failed - Payment not found
+2025-04-30 22:35:45.551 +07:00 [INF] Executing NotFoundObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Payment, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:35:45.552 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewAllPaymentMethodAsync (CinemaHub.API) in 14.1019ms
+2025-04-30 22:35:45.553 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewAllPaymentMethodAsync (CinemaHub.API)'
+2025-04-30 22:35:45.555 +07:00 [INF] Response: 404
+2025-04-30 22:35:45.555 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payment-methods?paymentMethod=sadasd - 404 null application/json; charset=utf-8 26.0968ms
+2025-04-30 22:36:01.043 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/184 - null null
+2025-04-30 22:36:01.047 +07:00 [INF] Incoming Request: GET /api/Payment/184
+2025-04-30 22:36:01.048 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentByIdAsync (CinemaHub.API)'
+2025-04-30 22:36:01.053 +07:00 [INF] Route matched with {action = "ViewPaymentById", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewPaymentByIdAsync(Int32) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:36:01.057 +07:00 [INF] ViewPaymentById API called.
+2025-04-30 22:36:01.074 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__paymentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM [Payments] AS [p]
+INNER JOIN [SubscriptionPlans] AS [s] ON [p].[SubscriptionPlanID] = [s].[PlanID]
+WHERE [p].[PaymentID] = @__paymentId_0
+2025-04-30 22:36:01.078 +07:00 [INF] ViewPaymentById completed successfully at "2025-04-30T15:36:01.0785758Z"
+2025-04-30 22:36:01.079 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[CinemaHub.Domain.Entities.Payment, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-30 22:36:01.083 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewPaymentByIdAsync (CinemaHub.API) in 27.8116ms
+2025-04-30 22:36:01.085 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentByIdAsync (CinemaHub.API)'
+2025-04-30 22:36:01.086 +07:00 [INF] Response: 200
+2025-04-30 22:36:01.086 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/184 - 200 null application/json; charset=utf-8 43.2691ms
+2025-04-30 22:36:55.170 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments/by-email?email=huy260704%40gmail.com&pageSize=3&paymentId=10000000 - null null
+2025-04-30 22:36:55.176 +07:00 [INF] Incoming Request: GET /api/Payment/payments/by-email
+2025-04-30 22:36:55.177 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentByEmailAsync (CinemaHub.API)'
+2025-04-30 22:36:55.181 +07:00 [INF] Route matched with {action = "ViewPaymentByEmail", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewPaymentByEmailAsync(System.String, Int32, System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:36:55.188 +07:00 [INF] ViewPaymentListByEmail API called.
+2025-04-30 22:36:55.203 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-04-30 22:36:55.218 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_2='?' (DbType = Int32), @__payment_UserId_0='?' (Size = 450), @__Parse_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PaymentID], [t].[Amount], [t].[ExpiryDate], [t].[PaymentCode], [t].[PaymentDate], [t].[PaymentMethod], [t].[PaymentStatus], [t].[SubscriptionPlanID], [t].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM (
+    SELECT TOP(@__p_2) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID]
+    FROM [Payments] AS [p]
+    WHERE [p].[UserID] = @__payment_UserId_0 AND [p].[PaymentID] < @__Parse_1
+    ORDER BY [p].[PaymentID] DESC
+) AS [t]
+INNER JOIN [SubscriptionPlans] AS [s] ON [t].[SubscriptionPlanID] = [s].[PlanID]
+ORDER BY [t].[PaymentID] DESC
+2025-04-30 22:36:55.221 +07:00 [INF] ViewPaymentListByEmail completed successfully for Email huy260704@gmail.com at "2025-04-30T15:36:55.2216026Z"
+2025-04-30 22:36:55.223 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Collections.Generic.List`1[[CinemaHub.Domain.Entities.Payment, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:36:55.225 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewPaymentByEmailAsync (CinemaHub.API) in 41.3642ms
+2025-04-30 22:36:55.227 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentByEmailAsync (CinemaHub.API)'
+2025-04-30 22:36:55.227 +07:00 [INF] Response: 200
+2025-04-30 22:36:55.228 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments/by-email?email=huy260704%40gmail.com&pageSize=3&paymentId=10000000 - 200 null application/json; charset=utf-8 58.5243ms
+2025-04-30 22:37:18.681 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments/remaining-duration?email=huy260704%40gmail.com - null null
+2025-04-30 22:37:18.719 +07:00 [INF] Incoming Request: GET /api/Payment/payments/remaining-duration
+2025-04-30 22:37:18.721 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API)'
+2025-04-30 22:37:18.725 +07:00 [INF] Route matched with {action = "ViewPaymentRemainingDuration", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewPaymentRemainingDurationAsync(System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:37:18.729 +07:00 [INF] ViewPaymentRemainingDuration API called.
+2025-04-30 22:37:18.736 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-04-30 22:37:18.758 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__payment_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM [Payments] AS [p]
+INNER JOIN [SubscriptionPlans] AS [s] ON [p].[SubscriptionPlanID] = [s].[PlanID]
+WHERE LOWER([p].[PaymentStatus]) = N'success' AND [p].[ExpiryDate] > GETDATE() AND [p].[UserID] = @__payment_UserId_0
+ORDER BY [p].[PaymentID] DESC
+2025-04-30 22:37:18.761 +07:00 [INF] ViewPaymentRemainingDuration completed successfully for Email huy260704@gmail.com at "2025-04-30T15:37:18.7617420Z"
+2025-04-30 22:37:18.763 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:37:18.766 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API) in 38.9623ms
+2025-04-30 22:37:18.768 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API)'
+2025-04-30 22:37:18.769 +07:00 [INF] Response: 200
+2025-04-30 22:37:18.770 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments/remaining-duration?email=huy260704%40gmail.com - 200 null application/json; charset=utf-8 89.7763ms
+2025-04-30 22:40:20.513 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - null null
+2025-04-30 22:40:20.533 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - 200 null text/html;charset=utf-8 20.1952ms
+2025-04-30 22:40:20.534 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-30 22:40:20.534 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - null null
+2025-04-30 22:40:20.539 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.6355ms
+2025-04-30 22:40:20.560 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.6798ms
+2025-04-30 22:40:20.606 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-04-30 22:40:20.630 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.1574ms
+2025-04-30 22:40:37.474 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments/remaining-duration?email=huy260704%40gmail.com - null null
+2025-04-30 22:40:37.479 +07:00 [INF] Incoming Request: GET /api/Payment/payments/remaining-duration
+2025-04-30 22:40:37.480 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API)'
+2025-04-30 22:40:37.485 +07:00 [INF] Route matched with {action = "ViewPaymentRemainingDuration", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewPaymentRemainingDurationAsync(System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:40:37.487 +07:00 [INF] ViewPaymentRemainingDuration API called.
+2025-04-30 22:40:37.497 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-04-30 22:40:37.504 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__payment_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM [Payments] AS [p]
+INNER JOIN [SubscriptionPlans] AS [s] ON [p].[SubscriptionPlanID] = [s].[PlanID]
+WHERE LOWER([p].[PaymentStatus]) = N'success' AND [p].[ExpiryDate] > GETDATE() AND [p].[UserID] = @__payment_UserId_0
+ORDER BY [p].[PaymentID] DESC
+2025-04-30 22:40:37.508 +07:00 [INF] ViewPaymentRemainingDuration completed successfully for Email huy260704@gmail.com at "2025-04-30T15:40:37.5084821Z"
+2025-04-30 22:40:37.509 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:40:37.512 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API) in 24.817ms
+2025-04-30 22:40:37.514 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API)'
+2025-04-30 22:40:37.515 +07:00 [INF] Response: 200
+2025-04-30 22:40:37.516 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments/remaining-duration?email=huy260704%40gmail.com - 200 null application/json; charset=utf-8 42.4231ms
+2025-04-30 22:46:05.784 +07:00 [INF] Start installing Hangfire SQL objects...
+2025-04-30 22:46:06.179 +07:00 [INF] Hangfire SQL objects installed.
+2025-04-30 22:46:06.309 +07:00 [INF] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-30 22:46:06.668 +07:00 [INF] Now listening on: https://localhost:7182
+2025-04-30 22:46:06.669 +07:00 [INF] Now listening on: http://localhost:5123
+2025-04-30 22:46:06.705 +07:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (local)@HangFire_CinemaHub'
+2025-04-30 22:46:06.706 +07:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-04-30 22:46:06.707 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-04-30 22:46:06.723 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 22:46:06.724 +07:00 [INF] Hosting environment: Development
+2025-04-30 22:46:06.725 +07:00 [INF] Content root path: D:\CinemaHub\CinemaHub.API
+2025-04-30 22:46:06.733 +07:00 [INF] Server laptop-q4e4lsdq:7308:f0b943ea successfully announced in 12.3171 ms
+2025-04-30 22:46:06.736 +07:00 [INF] Server laptop-q4e4lsdq:7308:f0b943ea is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-04-30 22:46:06.792 +07:00 [INF] Server laptop-q4e4lsdq:7308:f0b943ea all the dispatchers started
+2025-04-30 22:46:07.904 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - null null
+2025-04-30 22:46:08.097 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - 200 null text/html;charset=utf-8 197.4135ms
+2025-04-30 22:46:08.114 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - null null
+2025-04-30 22:46:08.114 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-30 22:46:08.132 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 18.3114ms
+2025-04-30 22:46:08.157 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.5287ms
+2025-04-30 22:46:08.194 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-04-30 22:46:08.276 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.4329ms
+2025-04-30 22:46:25.887 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments/remaining-duration?email=huy260704%40gmail.com - null null
+2025-04-30 22:46:25.895 +07:00 [INF] Incoming Request: GET /api/Payment/payments/remaining-duration
+2025-04-30 22:46:25.975 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API)'
+2025-04-30 22:46:25.997 +07:00 [INF] Route matched with {action = "ViewPaymentRemainingDuration", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewPaymentRemainingDurationAsync(System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:46:26.023 +07:00 [INF] ViewPaymentRemainingDuration API called.
+2025-04-30 22:46:26.749 +07:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-30 22:46:27.204 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-04-30 22:46:27.300 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__payment_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID], [s].[PlanID], [s].[CreatedAt], [s].[Description], [s].[Duration], [s].[IsActive], [s].[PlanName], [s].[Price]
+FROM [Payments] AS [p]
+INNER JOIN [SubscriptionPlans] AS [s] ON [p].[SubscriptionPlanID] = [s].[PlanID]
+WHERE LOWER([p].[PaymentStatus]) = N'success' AND [p].[ExpiryDate] > GETDATE() AND [p].[UserID] = @__payment_UserId_0
+ORDER BY [p].[PaymentID] DESC
+2025-04-30 22:46:27.311 +07:00 [INF] ViewPaymentRemainingDuration completed successfully for Email huy260704@gmail.com at "2025-04-30T15:46:27.3114152Z"
+2025-04-30 22:46:27.319 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[CinemaHub.Domain.Entities.Payment, CinemaHub.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-30 22:46:27.380 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API) in 1377.1493ms
+2025-04-30 22:46:27.382 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.ViewPaymentRemainingDurationAsync (CinemaHub.API)'
+2025-04-30 22:46:27.383 +07:00 [INF] Response: 200
+2025-04-30 22:46:27.388 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments/remaining-duration?email=huy260704%40gmail.com - 200 null application/json; charset=utf-8 1501.8007ms
+2025-04-30 22:46:46.672 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments/check-free-trial-subscription-plan?email=huy260704%40gmail.com - null null
+2025-04-30 22:46:46.681 +07:00 [INF] Incoming Request: GET /api/Payment/payments/check-free-trial-subscription-plan
+2025-04-30 22:46:46.684 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.CheckPaymentFreeTrialAsync (CinemaHub.API)'
+2025-04-30 22:46:46.691 +07:00 [INF] Route matched with {action = "CheckPaymentFreeTrial", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckPaymentFreeTrialAsync(System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:46:46.698 +07:00 [INF] CheckPaymentFreeTrial API called.
+2025-04-30 22:46:46.722 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-04-30 22:46:46.738 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__payment_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID]
+FROM [Payments] AS [p]
+WHERE LOWER([p].[PaymentStatus]) = N'success' AND [p].[SubscriptionPlanID] = 4 AND [p].[UserID] = @__payment_UserId_0
+2025-04-30 22:46:46.741 +07:00 [INF] CheckPaymentFreeTrial completed successfully for Email huy260704@gmail.com at "2025-04-30T15:46:46.7417651Z"
+2025-04-30 22:46:46.744 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:46:46.748 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.CheckPaymentFreeTrialAsync (CinemaHub.API) in 54.1198ms
+2025-04-30 22:46:46.751 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.CheckPaymentFreeTrialAsync (CinemaHub.API)'
+2025-04-30 22:46:46.752 +07:00 [INF] Response: 200
+2025-04-30 22:46:46.753 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments/check-free-trial-subscription-plan?email=huy260704%40gmail.com - 200 null application/json; charset=utf-8 80.5546ms
+2025-04-30 22:46:52.828 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Payment/payments/check-free-trial-subscription-plan?email=huy260704%40gmail.com - null null
+2025-04-30 22:46:52.831 +07:00 [INF] Incoming Request: GET /api/Payment/payments/check-free-trial-subscription-plan
+2025-04-30 22:46:52.835 +07:00 [INF] Executing endpoint 'CinemaHub.API.Controllers.PaymentController.CheckPaymentFreeTrialAsync (CinemaHub.API)'
+2025-04-30 22:46:52.836 +07:00 [INF] Route matched with {action = "CheckPaymentFreeTrial", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckPaymentFreeTrialAsync(System.String) on controller CinemaHub.API.Controllers.PaymentController (CinemaHub.API).
+2025-04-30 22:46:52.840 +07:00 [INF] CheckPaymentFreeTrial API called.
+2025-04-30 22:46:52.895 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AccountLockUntil], [a].[Balance], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpiration], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePicture], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName], [a].[ViolationCount]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__email_0
+2025-04-30 22:46:52.901 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__payment_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PaymentID], [p].[Amount], [p].[ExpiryDate], [p].[PaymentCode], [p].[PaymentDate], [p].[PaymentMethod], [p].[PaymentStatus], [p].[SubscriptionPlanID], [p].[UserID]
+FROM [Payments] AS [p]
+WHERE LOWER([p].[PaymentStatus]) = N'success' AND [p].[SubscriptionPlanID] = 4 AND [p].[UserID] = @__payment_UserId_0
+2025-04-30 22:46:52.903 +07:00 [INF] CheckPaymentFreeTrial completed successfully for Email huy260704@gmail.com at "2025-04-30T15:46:52.9038465Z"
+2025-04-30 22:46:52.905 +07:00 [INF] Executing OkObjectResult, writing value of type 'CinemaHub.API.Models.ApiResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 22:46:52.906 +07:00 [INF] Executed action CinemaHub.API.Controllers.PaymentController.CheckPaymentFreeTrialAsync (CinemaHub.API) in 67.3099ms
+2025-04-30 22:46:52.908 +07:00 [INF] Executed endpoint 'CinemaHub.API.Controllers.PaymentController.CheckPaymentFreeTrialAsync (CinemaHub.API)'
+2025-04-30 22:46:52.909 +07:00 [INF] Response: 200
+2025-04-30 22:46:52.909 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Payment/payments/check-free-trial-subscription-plan?email=huy260704%40gmail.com - 200 null application/json; charset=utf-8 81.2485ms

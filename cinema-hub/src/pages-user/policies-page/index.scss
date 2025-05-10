@@ -1,0 +1,59 @@
+/* Toàn bộ chính sách */
+.container{
+    background: url('https://www.elleman.vn/app/uploads/2019/02/02/phim-chieu-rap-022019.png') no-repeat center center;
+    background-size: cover;
+}
+
+.policy-container {
+    max-width: 1024px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #222; /* Gradient nền */
+    color: #DDDDDD; /* Văn bản dễ đọc */
+    border-radius: 12px; /* Bo góc mềm mại */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Tạo chiều sâu */
+    border: 2px solid #FFD700; /* Viền vàng nổi bật */
+  }
+  
+  
+  /* Tiêu đề chính */
+  .policy-title {
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #FFD700;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0px 4px 8px rgba(255, 223, 0, 0.6);
+    text-align: center;
+  }
+  
+  /* Section */
+  .policy-section {
+    margin-bottom: 25px;
+  }
+  
+  /* Tiêu đề mục */
+  .policy-section h2 {
+    font-size: 26px;
+    color: #FFD700; /* Cam sáng */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Đoạn văn */
+  .policy-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #DDDDDD;
+  }
+  
+  /* Liên kết */
+  .policy-section a {
+    color: #1E90FF; /* Xanh dương nổi bật */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .policy-section a:hover {
+    color: #f1a12a; /* Chuyển vàng khi hover */
+    text-decoration: underline;
+  }

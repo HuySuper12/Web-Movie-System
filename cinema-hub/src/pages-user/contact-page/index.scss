@@ -1,0 +1,123 @@
+/* General styling for the Contact Page */
+.contact-page {
+    // background-color: #121212; /* Dark background for contrast */
+    color: #fff; /* White text for good readability */
+    padding: 50px 15px;
+    font-family: 'Times New Roman', Times, serif;
+    // background-color: rgba(0, 0, 0, 0.856);
+    background: url('https://bloganchoi.com/wp-content/uploads/2022/08/anh-bia-1-1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .contact-title {
+    text-align: center;
+    font-size: 42px;
+    color: #f1a12a;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .contact-info,
+  .contact-form {
+    background-color: #222; /* Lighter dark background */
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    border: 2px solid #f1a12a; /* Yellow border */
+  }
+  
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: gold;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0px 4px 8px rgba(255, 223, 0, 0.6);
+    text-align: center;
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info li {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .contact-info a {
+    color: #f1a12a;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Form styling */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #FFD700; /* Yellow border on focus */
+    outline: none;
+  }
+  
+  .contact-form button.submit-btn {
+    background-color: #ffd900c9;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button.submit-btn:hover {
+    background-color: #c88c14; /* Slightly darker yellow on hover */
+  }
+  
+  /* Small screen (Mobile) styling */
+  @media screen and (max-width: 768px) {
+    .contact-page {
+      padding: 30px 10px;
+    }
+  
+    .contact-title {
+      font-size: 30px;
+    }
+  
+    .contact-info,
+    .contact-form {
+      padding: 20px;
+    }
+  
+    .contact-form button.submit-btn {
+      padding: 12px 20px;
+    }
+  }
+  

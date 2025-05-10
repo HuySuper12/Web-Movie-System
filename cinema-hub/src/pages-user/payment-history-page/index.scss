@@ -1,0 +1,190 @@
+.table-container {
+  max-height: 380px; /* Giới hạn chiều cao để kích hoạt scroll */
+  overflow-y: auto; /* Kích hoạt cuộn dọc */
+  overflow-x: auto; /* Kích hoạt cuộn ngang */
+  border: 1px solid #333; /* Thêm viền cho bảng */
+  background-color: #1f1f1f; /* Màu nền xám đen */
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px; /* Độ rộng thanh cuộn dọc */
+  height: 8px; /* Độ cao thanh cuộn ngang */
+}
+
+/* Màu nền của thanh cuộn */
+.table-container::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Màu nền tối */
+  border-radius: 4px;
+}
+
+/* Màu thanh trượt (cục kéo) */
+.table-container::-webkit-scrollbar-thumb {
+  background: #444; /* Màu xám đậm hơn */
+  border-radius: 4px;
+}
+
+/* Hover vào thanh trượt */
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #666; /* Màu sáng hơn một chút khi hover */
+}
+
+/* Tùy chỉnh thanh cuộn trên Firefox */
+.table-container {
+  scrollbar-color: #444 #1f1f1f; /* Thanh trượt - Nền */
+  scrollbar-width: thin; /* Thanh cuộn mỏng hơn */
+}
+
+.payment-history-container {
+  max-width: 900px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #222;
+  border-radius: 12px; /* Bo góc mềm hơn */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Shadow đậm hơn */
+  border: 1px solid #ffd700;
+  min-height: 40vh;
+}
+
+h3.ant-typography {
+  text-align: center;
+  color: #333;
+  font-size: 28px; /* Tăng kích thước chữ */
+  font-weight: 700; /* Đậm hơn */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #333; /* Đường phân cách */
+  padding-bottom: 10px;
+}
+
+.table-payment {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 20px;
+  // border-radius: 200px;
+}
+
+.thead-payment {
+  background-color: #292929; /* Nền header */
+}
+
+.th-payment, .td-payment {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #444444; /* Viền giữa các ô */
+}
+
+.th-payment {
+  color: #f0f0f0;
+  font-weight: bold;
+}
+
+.tbody-payment tr:nth-child(even) {
+  background-color: #222222; /* Màu nền hàng chẵn */
+}
+
+.tbody-payment tr:nth-child(odd) {
+  background-color: #333333; /* Màu nền hàng lẻ */
+}
+
+.tbody-payment tr:hover {
+  background-color: #444444; /* Màu khi hover */
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tag.completed {
+  background-color: green;
+  color: #ffffff;
+}
+
+.tag.pending {
+  background-color: gold;
+  color: #000000;
+}
+
+.tag.failed {
+  background-color: red;
+  color: #ffffff;
+}
+
+.payment-method {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #1890ff;
+}
+
+.payment-method img {
+  margin: 0px;
+}
+
+.pagination-payment {
+  display: flex;
+  justify-content: center; /* Căn giữa pagination */
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.pagination-payment .ant-pagination-item {
+  background-color: #333; /* Màu nền xám tối */
+  border: 1px solid #444; /* Viền màu đậm hơn */
+  color: #fff; /* Màu chữ trắng */
+  border-radius: 4px; /* Bo tròn nhẹ các góc */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-payment .ant-pagination-item a {
+  color: #fff; /* Màu chữ trắng */
+}
+
+.pagination-payment .ant-pagination-item-active {
+  background-color: #666; /* Màu nền cho trang hiện tại */
+  border-color: #999; /* Viền nhạt hơn */
+}
+
+.pagination-payment .ant-pagination-item-active a {
+  color: #ffcc00; /* Màu chữ nổi bật cho trang hiện tại */
+  font-weight: bold;
+}
+
+.pagination-payment .ant-pagination-item:hover {
+  background-color: #555; /* Hiệu ứng hover: Màu nền sáng hơn một chút */
+  border-color: #777;
+}
+
+.pagination-payment .ant-pagination-item:hover a {
+  color: #ffcc00; /* Màu chữ nổi bật khi hover */
+}
+
+.pagination-payment .ant-pagination-prev,
+.pagination-payment .ant-pagination-next {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.pagination-payment .ant-pagination-prev:hover,
+.pagination-payment .ant-pagination-next:hover {
+  background-color: #555;
+  border-color: #777;
+}
+
+.pagination-payment .ant-pagination-disabled {
+  color: #777; /* Màu chữ mờ cho nút bị vô hiệu hóa */
+  cursor: not-allowed;
+}
+
+.no-payment{
+  padding: 40px;
+  font-size: 18px;
+  color: #bbb;
+  text-align: center;
+  margin-top: 20px;
+}

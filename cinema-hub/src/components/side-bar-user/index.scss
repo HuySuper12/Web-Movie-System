@@ -1,0 +1,103 @@
+/* Tổng thể Sidebar */
+.sidebar {
+    background: #222; /* Xanh đen đậm */
+    width: 80%;
+    height: 100vh;
+    color: #f5f5f5; /* Màu trắng nhạt */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 1px solid #ffc107;
+  }
+  
+  /* Header */
+  .sidebar-header {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: gold;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0px 4px 8px rgba(255, 223, 0, 0.6);
+  }
+
+  .search-section h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffc107; /* Vàng ánh kim */
+    margin-bottom: 30px;
+  }
+  
+  /* Search Box */
+  .search-section input {
+    width: 100%;
+    padding: 10px 15px;
+    background: #333; /* Nền xám xanh đậm */
+    border: none;
+    border-radius: 10px;
+    color: white; /* Trắng nhạt */
+    font-size: 16px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+    outline: none;
+    margin-bottom: 30px;
+  }
+  
+  
+  .search-section input::placeholder {
+    color: #a1a1b2; /* Màu placeholder nhạt */
+  }
+  
+  /* Filter Section */
+  .filter-section h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffc107; /* Vàng ánh kim */
+    margin-bottom: 30px;
+  }
+  
+  .filter-item {
+    margin-bottom: 20px;
+  }
+  
+  .filter-item label {
+    display: block;
+    font-size: 14px;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+  }
+  
+  .filter-item select {
+    width: 100%;
+    padding: 10px;
+    background: #333; /* Nền xám xanh đậm */
+    color: #f5f5f5; /* Trắng nhạt */
+    border: 1px solid #3a3a4c; /* Viền tinh tế */
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover/Focus Hiệu ứng */
+  .filter-item select:hover {
+    background: #333; /* Xám đậm hơn khi hover */
+  }
+  
+  .filter-item select:focus {
+    border: 1px solid #ffc107; /* Viền vàng khi focus */
+  }
+  
+  /* Footer */
+  .sidebar-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #a1a1b2; /* Màu xám nhạt */
+    margin-top: 30px;
+  }
+  
+  .sidebar-footer p {
+    margin: 0;
+  }
+  

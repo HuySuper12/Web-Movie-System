@@ -1,0 +1,62 @@
+/* Container cho Tabs để căn phải */
+.tabs-container {
+    display: flex;
+    justify-content: flex-end; /* Căn sang phải */
+    margin-right: 20px; /* Tạo khoảng cách với lề phải */
+  }
+  
+  /* Tùy chỉnh các Tab */
+  .custom-tabs .ant-tabs-nav {
+    display: flex;
+    justify-content: flex-end; /* Đảm bảo Tab bên phải */
+  }
+  
+  .custom-tabs .ant-tabs-tab {
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #536d79; /* Màu chữ mặc định */
+    text-decoration: none; /* Bỏ gạch dưới */
+  }
+  
+  .custom-tabs .ant-tabs-tab-active {
+    background: linear-gradient(45deg, white, );
+    color: white; /* Màu chữ khi tab active */
+    border-color: transparent;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-tabs .ant-tabs-tab:hover {
+    background: #f0f0f0; /* Hiệu ứng hover */
+    color: orange; /* Màu chữ khi hover */
+  }
+  
+  /* styles.css */
+/* styles.css */
+.custom-button {
+  background-color: #536d79; /* Màu nền */
+  border-color: #536d79; /* Màu viền */
+  color: #ffffff; /* Màu chữ */
+  margin-right: 73%;
+  padding: 20px;
+}
+
+.custom-button:hover {
+  background-color: #6a8792; /* Màu nền khi hover */
+  border-color: #6a8792; /* Màu viền khi hover */
+  color: #ffffff; /* Màu chữ khi hover */
+}
+
+.custom-button:focus {
+  background-color: #6a8792; /* Màu nền khi focus */
+  border-color: #6a8792; /* Màu viền khi focus */
+  color: #ffffff; /* Màu chữ khi focus */
+}
+
+
+

@@ -1,0 +1,30 @@
+  .custom-button-staff {
+    background-color: #536d79; /* Màu nền */
+    border-color: #536d79; /* Màu viền */
+    color: #ffffff; /* Màu chữ */
+    margin-right: 88%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .custom-button-manager {
+    background-color: #536d79; /* Màu nền */
+    border-color: #536d79; /* Màu viền */
+    color: #ffffff; /* Màu chữ */
+    margin-right: 59%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .custom-button:hover {
+    background-color: #6a8792; /* Màu nền khi hover */
+    border-color: #6a8792; /* Màu viền khi hover */
+    color: #ffffff; /* Màu chữ khi hover */
+  }
+  
+  .custom-button:focus {
+    background-color: #6a8792; /* Màu nền khi focus */
+    border-color: #6a8792; /* Màu viền khi focus */
+    color: #ffffff; /* Màu chữ khi focus */
+  }
+
+  

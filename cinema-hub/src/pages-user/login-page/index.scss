@@ -1,0 +1,157 @@
+/* CSS cho trang đăng nhập */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://bloganchoi.com/wp-content/uploads/2022/08/anh-bia-1-1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .login-background {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    background: rgba(0, 0, 0, 0.418);
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+    width: 350px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border: 1px solid #e50914;
+  }
+  
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #e50914;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-login:hover {
+    background: #f6121d;
+  }
+  
+  .divider {
+    margin: 20px 0;
+    color: #bbb;
+  }
+  
+  .btn-code-login {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .options {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #bbb;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .options a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .options a:hover {
+    text-decoration: underline;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me label {
+    margin-left: 5px;
+    color: #bbb;
+  }
+  
+  .register {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .register a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .register a:hover {
+    text-decoration: underline;
+  }
+
+  .login__google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+    height: 45px;
+}
+
+.show-password{
+  width: 15%;
+  background-color: none;
+  color: #fff;
+  position: relative;
+  top: 30px;
+  left: 85%;
+}
+
+  
